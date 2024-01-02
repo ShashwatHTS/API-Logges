@@ -19,6 +19,10 @@ app.use(bodyParser.json());
 
 const port = process.env.PORT || 4000
 
+app.get("/", async(req,res)=>{
+  res.send('hello')
+})
+
 
 app.use("/api/v1/books", require("./routes/book.routes.js"))
 

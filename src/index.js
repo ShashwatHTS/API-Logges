@@ -48,6 +48,9 @@ const port = process.env.PORT || 4000
 app.use("/api/v1/books", require("./routes/book.routes.js"))
 
 app.use("/api/v1/auth", require("./routes/auth.routes.js"))
+app.get("/", async(req, res) => {
+  res.json("hello world")
+})
 
 app.listen(port, () => console.log(`app listening on port ${port}!`))
 
